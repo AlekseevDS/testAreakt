@@ -40,20 +40,26 @@ class Main2ex {
     }
 }
 fun main() {
-    val firstNum = 625
+    val firstNum = 2
     val sqnum = firstNum * firstNum
     var seq = Main2ex.decomposeNumber(sqnum)
-    var seqResult = seq.subList(0,seq.size)
-    var numFromDecomp = seq.sum() - seq[0]
+    var seqResult = ArrayList<Int>()
+    seqResult.addAll(seq)
     print(seq)
     var count = 0
 
     while (Main2ex.reDec(seq)) {
+        var numFromDecomp = seq.sum()
+        seqResult.clear()
+        for (i in 0..count) {
+            seqResult.add(seq[i])
+            numFromDecomp = numFromDecomp - seq[i]
+        }
         val seq2 = Main2ex.decomposeNumber(numFromDecomp)
         print(seq2)
-        seq = arrayListOf(seq[0])
-        seq.addAll(seq2)
-        numFromDecomp = seq2.sum() - seq2[0]
+        seqResult.addAll(seq2)
+        seq.clear()
+        seq.addAll(seqResult)
         count++
     }
     print(seq)
