@@ -1,0 +1,1 @@
+D:\DDoc\Code\RSSchool\Projects\TestAreaKt\build\classes\kotlin\main\MainAppKt.class;D:\DDoc\Code\RSSchool\Projects\TestAreaKt\build\classes\kotlin\main\mainApp.class
