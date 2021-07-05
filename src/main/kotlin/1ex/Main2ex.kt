@@ -12,17 +12,13 @@ class Main2ex {
             var elemOfSequence = 0
             val firstElemOfSequence = sqrt(number.toDouble()).toInt() - 1
             var arrElemOfSequence: ArrayList<Int> = arrayListOf(firstElemOfSequence * firstElemOfSequence)
-            val tempOfposition = 0
 
             while (sqNum > arrElemOfSequence.sum()) {
                 var ostatok = sqNum - arrElemOfSequence.sum()
                 elemOfSequence = sqrt(ostatok.toDouble()).toInt()
                 arrElemOfSequence.add(elemOfSequence * elemOfSequence)
             }
-
             return arrElemOfSequence
-
-
         }
 
         fun reDec(arr: ArrayList<Int>): Boolean {
@@ -40,7 +36,7 @@ class Main2ex {
     }
 }
 fun main() {
-    val firstNum = 2
+    val firstNum = 11
     val sqnum = firstNum * firstNum
     var seq = Main2ex.decomposeNumber(sqnum)
     var seqResult = ArrayList<Int>()
