@@ -2,7 +2,7 @@ package `1ex`
 
 import kotlin.math.sqrt
 
-class Main3ex {
+class Main4ex {
 
     fun decomposeNumber(number: Int): Array<Int>? {
         if (number > 4) {
@@ -12,13 +12,19 @@ class Main3ex {
             seqResult.addAll(seq)
             println(seq) //TODO Delete
             var count = 0
-            if (number > 1000000 && number < 7000000){
-                count++
-            } else if (number > 1000000 && number > 7000000) {count = count + 2}
 
             while (reDecompose(seq)) {
                 var numFromDecomp = seq.sum()
-                seqResult.clear()
+                //seqResult.clear()
+
+                for (i in seq.size - 1 downTo 1) {
+                    if (seq[i] == seq[i - 1]) {
+                    seqResult[i - 1]
+                    }
+                }
+
+
+
                 for (i in 0..count) { //TODO Think about it
                     seqResult.add(seq[i])
                     numFromDecomp = numFromDecomp - seq[i]
@@ -70,18 +76,11 @@ class Main3ex {
         }
         println(arr) //TODO Delete
         return rez
-
     }
-
 
 }
 fun main() {
     val myObjects:Main4ex = Main4ex()
-    myObjects.decomposeNumber(5)
-
+    myObjects.decomposeNumber(1234567)
 }
-
-
-
-
 
